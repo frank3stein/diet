@@ -3,32 +3,45 @@
         "protein":5.5,
         "count":10,
         "serving":3,
+        "price": 2.89,
         "_comment":"Serving is per eggs"
     },
-    "chicken":{
+    "chicken900":{
         "protein":23,
-        "weight":900,
-        "serving":4.5,
-        "_comment":"Serving is per 100 grams" 
+        "weight":0.9,
+        "serving":0.45,
+        "price": 6.75,
+        "_comment":"Serving is in grams" 
+    },
+    "chicken600":{
+        "protein":23,
+        "weight":0.6,
+        "serving":0.3,
+        "price": 5,
+        "_comment":"Serving is in grams" 
     },
     "kwark":{
         "protein":8.5,
-        "weight":1000,
-        "serving":2
+        "weight":1,
+        "serving":0.2,
+        "price": 1.45
     },
     "milk":{
         "protein":3.5,
-        "weight":2000,
-        "serving":1
+        "weight":2,
+        "serving":0.2,
+        "price": 1.49
     },
     "oats":{
         "protein":14,
         "weight":450,
-        "serving":1
+        "serving":0.7,
+        "price": 1.15
     },
     "cottageCheese":{
         "protein":19,
-        "weight":200,
-        "serving":1
+        "weight":0.2,
+        "serving":0.1,
+        "price": 0.95
     }
 }
