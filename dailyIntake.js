@@ -1,7 +1,7 @@
 const nutrition = require("./nutritionalValues.json");
 const breakfast = [nutrition.eggs, nutrition.milk, nutrition.cottageCheese];
 const lunch = [nutrition.oats, nutrition.kwark];
-const dinner = [nutrition.chicken900, nutrition.cottageCheese];
+const dinner = [nutrition.chicken600, nutrition.cottageCheese];
 const day = [].concat(breakfast, lunch, dinner);
 // TODO for different packages of Chicken, [''] selection
 // Spinach and rucola to be added
@@ -9,7 +9,11 @@ const day = [].concat(breakfast, lunch, dinner);
 function proteinIntakePerMeal(array){
     let proteinCountInGrams = 0;
     array.forEach(function(element){
-        proteinCountInGrams += element.protein * element.serving;
+        if (element.count){
+            proteinCountInGrams += element.serving * element.protein;
+        } else {
+        proteinCountInGrams += element.protein * element.serving * 10;
+        }
     });
   return proteinCountInGrams;
 }
@@ -22,6 +26,8 @@ function costPerMeal(array){
     })
     return cost;
 }
+
+console.log('Daily protein intake', proteinIntakePerMeal(breakfast) + proteinIntakePerMeal(lunch) + proteinIntakePerMeal(dinner));
 
 function costPerMonth(){
     console.log('Breakfast cost ', costPerMeal(breakfast).toFixed(2),'€');

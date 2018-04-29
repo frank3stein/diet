@@ -34,8 +34,8 @@
     },
     "oats":{
         "protein":14,
-        "weight":450,
-        "serving":0.7,
+        "weight":0.45,
+        "serving":0.10,
         "price": 1.15
     },
     "cottageCheese":{
